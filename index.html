@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYT API</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/dfd354575f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/nyt.css">
+    <script defer src="js/nyt.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="hero-section-line">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 mt-2">
+                    <a href="index.html"><img src="img/new-york-times-logo-png-transparent.png" alt="NYTimes Logo" height="72"></a>
+                </div>
+                <div class="col-12 col-md-6 mt-1 mt-md-2 text-end">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 pt-3">
+                                <label for="section" id="select-label" hidden>Select News section</label>
+                                <select name="section" id="section" class="select">
+                                    <option value="">Select section</option>
+                                    <option value="arts">Arts</option>
+                                    <option value="books">Books</option>
+                                    <option value="business">Business</option>
+                                    <option value="food">Food</option>
+                                    <option value="health">Health</option>
+                                    <option value="magazine">Magazine</option>
+                                    <option value="movies">Movies</option>
+                                    <option value="opinion">Opinion</option>
+                                    <option value="science">Science</option>
+                                    <option value="sports">Sports</option>
+                                    <option value="style">Style</option>
+                                    <option value="technology">Technology</option>
+                                    <option value="theater">Theater</option>
+                                    <option value="travel">Travel</option>
+                                    <option value="u.s">U.S.</option>
+                                    <option value="world">World</option>
+                                </select>
+                                <button class="rounded-4 refresh"><i class="fa-solid fa-arrows-rotate"></i>
+                                    <span class="visually-hidden">Refresh</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <hr class="mb-1">
+    <hr class="mt-0">
+    <main>
+        <div class="container d-flex flex-row">
+            <div class="error"></div>
+            <div class="row">
+                <!-- Featured article section -->
+                <div class="col-lg-9">
+                    <div class="container featured">
+                        <div class="row featured">
+                            <div class="col-12 featured-img">
+                            </div>
+                            <div class="col-12">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12 col-md-6 pt-2 ps-0 d-flex flex-row">
+                                            <div class="button-red pe-2"></div>
+                                            <div class="button-white pe-2"><a></a></div>
+                                            <div class="featured-subsection pe-2"></div>
+                                        </div>
+                                        <div class="col-12 col-md-6 text-end pt-2 pe-0">
+                                            <p class="mb-0 featured-author"></p>
+                                            <p class="mt-0 featured-date"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <article class="featured-article">
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div id="loading-icon" class="loading-icon"></div> -->
+                <!-- Headlines section -->
+                <div class="col-lg-3 d-none d-lg-block more-headlines">
+                </div>
+            </div>
+        </div>
+        <hr class="mb-1">
+        <hr class="mt-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col top-articles mb-3 fw-bold ">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row other-news row-cols-1 row-cols-lg-2 output g-2">
+            </div>
+        </div>
+    </main>
+    <footer class="mt-5">
+        <div class="container-fluid p-3 bg-dark mt-3">
+            <div class="row">
+                <div class="col-12 text-center text-white d-flex justify-content-center align-items-center">
+                    <p class="m-0">©2023 Developed by Katya Pankov. Powered by NY Times API.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+
+</html>
