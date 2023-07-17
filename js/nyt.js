@@ -3,7 +3,7 @@
 // store api key in a variable
 const api_key = 'AX1mRQHczgXhqC4eYD5rwwGcO30m2n3V';
 // store url in a variable
-const url1 = "http://api.nytimes.com/svc/topstories/v2/home.json?api-key=" + api_key;
+const url1 = "https://api.nytimes.com/svc/topstories/v2/home.json?api-key=" + api_key;
 // declare function fetchApiData() that accepts one parameter, url
 async function fetchApiData(url) {
     // try to fetch the data
